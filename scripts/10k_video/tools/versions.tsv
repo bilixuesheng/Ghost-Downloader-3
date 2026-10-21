@@ -1,0 +1,32 @@
+# version -> how to capture it. Columns are TAB separated:
+# tag  env  entry  scenario  extra
+#   env: Python environment under envs/ (A: PySide6 6.8 + PySide6-Fluent-Widgets 1.1.9,
+#        B: 6.8 + fluent 1.6.6, C: 6.9.1 + fluent 1.8.3, D: deps of v4.4.4 + niquests,
+#        E: like D with wreq 0.12.1, G2: Python 3.10 + PySide2 for Ghost Downloader 2)
+#   entry: script inside the checkout, or @path relative to this generator
+#   extra: CAP_PRELUDE (scen/), EXTRA_PYTHONPATH (stub dir), CAP_ARGS, scenario env vars
+v2.9.9	A	main.py	v299.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.1.0	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.2.0	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.3.0	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.4.0	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win CAP_ARGS=--debug
+v3.4.1	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win CAP_ARGS=--debug
+v3.4.5	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win CAP_ARGS=--debug
+v3.5.0	B	main.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win CAP_ARGS=--debug
+v3.5.7	C	Ghost-Downloader-3.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.6	C	Ghost-Downloader-3.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.6.1	C	Ghost-Downloader-3.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.5.12	C	Ghost-Downloader-3.py	v3x.py	CAP_PRELUDE=prelude_old.py EXTRA_PYTHONPATH=stubs_win
+v3.7	D	Ghost-Downloader-3.py	vm.py	
+v3.8.3	D	Ghost-Downloader-3.py	vm.py	
+v3.9	D	Ghost-Downloader-3.py	vm.py	
+v3.10	D	Ghost-Downloader-3.py	vm.py	
+v4.0.0	E	Ghost-Downloader-3.py	vm.py	
+v4.1.0	E	Ghost-Downloader-3.py	vm.py	
+v4.1.1	E	Ghost-Downloader-3.py	vm.py	
+v4.2.6	E	Ghost-Downloader-3.py	vm.py	
+v4.3.0	E	Ghost-Downloader-3.py	vm.py	
+v4.4.0	E	Ghost-Downloader-3.py	vm.py	
+v4.4.4	D	Ghost-Downloader-3.py	vm.py	
+v4.0.0-mobile	E	@scen/mobile_preview_v400.py	mobile.py	
+gd2	G2	GhostDownloader2.py	gd2.py	CAP_PRELUDE=prelude_gd2.py EXTRA_PYTHONPATH=stubs_gd2
